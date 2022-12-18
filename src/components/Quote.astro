@@ -1,0 +1,58 @@
+---
+export interface Props {
+  quote: string;
+  author: string;
+}
+
+const { quote, author } = Astro.props as Props;
+---
+
+<div class="quote">
+  <div class="img-container"></div>
+    <h1>{quote}</h1>
+    <p>{author}</p>
+</div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
+  .quote {
+    font-family: "Covered By Your Grace", "Roboto";
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: italic;
+  }
+
+  .quote .img-container {
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    background-image: url("../images/computer.png");
+    background-size: cover;
+    opacity: 0.3;
+  }
+
+  .quote h1 {
+    padding: 30px;
+    font-size: 50px;
+    color: #000;
+  }
+
+  .quote p {
+    padding: 30px;
+    font-size: 30px;
+  }
+
+  .quote img {
+    width: 100%;
+    opacity: 0.4;
+  }
+
+  @media (max-width: 500px) {
+    .quote h1 {
+      padding: 0;
+    }
+  }
+</style>

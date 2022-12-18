@@ -1,6 +1,6 @@
 :root {
   --color-primary: #0f172a;
-  --color-secondary: #6b21a8;
+  --color-secondary: #e6ecab;
 }
 
 *,
@@ -15,7 +15,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background: #f8fafc;
   color: #333;
 }
 
@@ -86,6 +85,7 @@ h3 {
     display: block;
     margin: auto;
   }
+
   .logos {
     display: none;
   }
