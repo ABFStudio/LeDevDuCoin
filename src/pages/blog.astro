@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import Showcase from "../components/Showcase.astro";
 
 const articles = await Astro.glob("../articles/*.md");
 ---
 
 <Layout title="Astro Blog">
-  <Showcase heading="Astro bolg" text="blog with astro" />
   <section class="page-content">
     <div class="container">
       {
