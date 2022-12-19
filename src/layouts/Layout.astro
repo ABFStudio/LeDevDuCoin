@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import logoDark from "../images/logo-dark.png";
+import logoLight from "../images/logo-light.png";
 import "../styles/index.css";
 
 export interface Props {
@@ -19,6 +21,8 @@ const { title = 'MODIFIER LE TITRE' } = Astro.props as Props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href={logoLight} type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="shortcut icon" href={logoDark} type="image/x-icon" media="(prefers-color-scheme: light)">
     <title>Le Dev du Coin - {title}</title>
 </head>
 <body>

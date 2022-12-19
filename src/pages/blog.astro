@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-
+import Quote from "../components/Quote.astro";
 const articles = await Astro.glob("../articles/*.md");
 ---
 
 <Layout title="Astro Blog">
+  <Quote quote="placeholder" author="placeholder"/>
   <section class="page-content">
     <div class="container">
       {

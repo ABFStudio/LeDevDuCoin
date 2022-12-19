@@ -1,5 +1,5 @@
 ---
-import logo from "../images/logo.svg"
+import logo from "../images/logo-dark.png"
 ---
 
 <header class="header">
@@ -10,10 +10,24 @@ import logo from "../images/logo.svg"
       </a>
     </div>
     <nav>
+      <svg class="hamburger" viewBox="0 0 100 80" width="40" height="40" fill="#fff">
+        <rect width="100" height="20"></rect>
+        <rect y="30" width="100" height="20"></rect>
+        <rect y="60" width="100" height="20"></rect>
+      </svg>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li>
+          <a href="/">Accueil</a>
+        </li>
+        <li>  
+          <a href="/services">Services</a>
+        </li>
+        <li>
+          <a href="/about">A propos</a>
+        </li>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -34,7 +48,9 @@ import logo from "../images/logo.svg"
   }
 
   .header img {
-    height: 35px;
+    padding-top: 10px;
+    height: 110px;
+    width: 120px;
     vertical-align: middle;
   }
 
@@ -48,5 +64,19 @@ import logo from "../images/logo.svg"
 
   .header nav ul li a {
     color: #fff;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  @media (max-width: 500px) {
+    .header nav li {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
   }
 </style>
